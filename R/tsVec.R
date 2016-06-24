@@ -5,8 +5,25 @@
 #' @keywords time-series
 #' @export
 #' @examples 
-#' tsVec()
+#' #Example Dates
+#' x <- ISOdatetime(2014,01,01,01,00,00)
+#' y <- ISOdatetime(2016,06,24,18,00,00)
 #' 
+#' #Vector by Month
+#' tsVec(x,y,"month")
+#' 
+#' #Vector by Week
+#' tsVec(x,y,"week","EST")
+#' 
+#' #Vector by Day
+#' tsVec(x,y,"day","EST")
+#' 
+#' #Vector by Hour
+#' tsVec(x,y,"hour","GMT")
+#' tsVec()
+#'
+#' 
+#'   
 tsVec <- function(x, y, BY = c("month", "week","day", "hour"), TZ = "EST"){
   
   #Pull Starting Date Info  
